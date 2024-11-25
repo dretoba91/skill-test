@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState } from "react";
-import { useRouter } from "next/navigation"; // Change import for App Router
+import { useRouter } from "next/navigation";
 
 const Sidebar: React.FC = () => {
   const router = useRouter();
@@ -31,7 +33,7 @@ const Sidebar: React.FC = () => {
             </defs>
             <g
               data-name="アートボード – 1"
-              clip-path="url(#a)"
+              clipPath="url(#a)"
               fill="none"
               stroke="black"
             >
