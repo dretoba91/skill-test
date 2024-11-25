@@ -43,7 +43,7 @@ const UpdateModal: React.FC<UpdateModalProps> = ({
   //       [e.target.name]: e.target.value,
   //     });
   //   };
-  const handleChange = (e: { target: { name: any; value: any } }) => {
+  const handleChange = (e: { target: { name: string; value: number } }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
