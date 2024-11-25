@@ -43,9 +43,14 @@ const UpdateModal: React.FC<UpdateModalProps> = ({
   //       [e.target.name]: e.target.value,
   //     });
   //   };
-  const handleChange = (e: { target: { name: string; value: number } }) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+//  const handleChange = (e: { target: { name: string; value: number } }) => {
+  //  setFormData({ ...formData, [e.target.name]: e.target.value });
+//  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  setFormData({ ...formData, [e.target.name]: e.target.value });
+};
+
 
   const handleSave = () => {
     onSave(formData);
