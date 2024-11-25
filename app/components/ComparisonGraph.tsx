@@ -2,15 +2,11 @@
 
 import React from "react";
 import { Chart } from "react-chartjs-2";
+// import Chart from 'chart.js/auto';
 
 import {
   Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
+  CategoryScale, LineController, LineElement, PointElement, LinearScale, Title, Tooltip,
   Legend,
 } from "chart.js";
 
@@ -18,7 +14,8 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement,
+  LineElement, 
+  LineController,
   Title,
   Tooltip,
   Legend

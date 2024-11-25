@@ -11,7 +11,7 @@ import Question from "../components/Question";
 import { useState } from "react";
 
 
-const dataPoints = [0, 25, 50, 75, 100];
+// const dataPoints = [0, 25, 50, 75, 100];
 const data = [
   { title: "HTML Tools, Forms, History", percentage: 80, color: "blue" },
   { title: "Tags & References in HTML", percentage: 60, color: "orange" },
@@ -66,12 +66,12 @@ const SkillSet = () => {
                   scores={scores}
                 />
                 <QuickStat scores={scores} />
-                <ComparisonGraph
+                {/* <ComparisonGraph
                   dataPoints={dataPoints}
                   percentile={scores.percentile}
                   lineColor="gray"
                   pointColor="blue"
-                />
+                /> */}
               </div>
             </div>
             <div className="w-full md:w-2/5 p-4">
