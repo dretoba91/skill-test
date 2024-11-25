@@ -5,7 +5,7 @@ import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import Language from "../components/Language";
 import QuickStat from "../components/QuickStat";
-import ComparisonGraph from "../components/ComparisonGraph";
+// import ComparisonGraph from "../components/ComparisonGraph";
 import Syllabus from "../components/Syllabus";
 import Question from "../components/Question";
 import { useState } from "react";
