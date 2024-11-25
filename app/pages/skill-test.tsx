@@ -10,11 +10,8 @@ import Syllabus from "../components/Syllabus";
 import Question from "../components/Question";
 import { useState } from "react";
 
-// const data02 = [
-//   { rank: 1, percentile: 30, currentScore: 10, yaxis: [0, 25, 50, 75, 100] },
-// ];
+
 const dataPoints = [0, 25, 50, 75, 100];
-const percentile = 85;
 const data = [
   { title: "HTML Tools, Forms, History", percentage: 80, color: "blue" },
   { title: "Tags & References in HTML", percentage: 60, color: "orange" },
@@ -23,9 +20,6 @@ const data = [
 ];
 
 const SkillSet = () => {
-  const [rank, setRank] = useState(1);
-  const [percentiles, setPercentiles] = useState(30);
-  //   const [score, setScore] = useState(10);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [scores, setScores] = useState({
     rank: 1,
@@ -47,18 +41,8 @@ const SkillSet = () => {
     score: number;
   }) => {
     setScores(updatedScores);
-    console.log("Updated Scores:", updatedScores); // Perform any API call or data update logic here
+    console.log("Updated Scores:", updatedScores);
   };
-
-  //   const handleSaveScores = (
-  //     rank: number,
-  //     percentiles: number,
-  //     score: number
-  //   ) => {
-  //     setRank(rank);
-  //     setPercentiles(percentiles);
-  //     setScore(score);
-  //   };
 
   return (
     <div className="bg-white min-h-screen">
