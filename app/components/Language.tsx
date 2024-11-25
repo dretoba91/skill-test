@@ -2,15 +2,19 @@ import React from "react";
 import Image from "next/image";
 import UpdateModal from "./UpdateModal";
 
-interface LanguageProps<T> {
+interface LanguageProps {
   isModalOpen: boolean;
   handleOpenModal: () => void;
   handleCloseModal: () => void;
-  handleSaveScores: (scores: T) => void;
-  scores: T;
+  handleSaveScores: (scores: {
+    rank: number;
+    percentile: number;
+    score: number;
+  }) => void;
+  scores: { rank: number; percentile: number; score: number };
 }
 
-const Language: React.FC<LanguageProps<any>> = ({
+const Language: React.FC<LanguageProps> = ({
   handleOpenModal,
   isModalOpen,
   handleCloseModal,

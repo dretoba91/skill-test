@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-interface UpdateModalProps<T> {
+interface UpdateModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSave: (scores: T) => void;
-  scores: T;
+  onSave: (scores: { rank: number; percentile: number; score: number }) => void;
+  scores: { rank: number; percentile: number; score: number };
 }
 
-const UpdateModal: React.FC<UpdateModalProps<any>> = ({
+const UpdateModal: React.FC<UpdateModalProps> = ({
   isOpen,
   onClose,
   onSave,
