@@ -7,6 +7,13 @@ interface UpdateModalProps {
   scores: { rank: number; percentile: number; score: number };
 }
 
+interface MyCustomEvent {
+  target: {
+    name: string;
+    value: string;
+  };
+}
+
 const UpdateModal: React.FC<UpdateModalProps> = ({
   isOpen,
   onClose,
@@ -45,11 +52,12 @@ const UpdateModal: React.FC<UpdateModalProps> = ({
   //   };
 //  const handleChange = (e: { target: { name: string; value: number } }) => {
   //  setFormData({ ...formData, [e.target.name]: e.target.value });
-//  };
+//  };  
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+const handleChange = (e: MyCustomEvent) => {
   setFormData({ ...formData, [e.target.name]: e.target.value });
 };
+
 
 
   const handleSave = () => {
