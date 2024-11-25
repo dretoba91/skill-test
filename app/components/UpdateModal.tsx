@@ -15,34 +15,6 @@ const UpdateModal: React.FC<UpdateModalProps> = ({
 }) => {
   const [formData, setFormData] = useState(scores);
 
-  //   const [rankFormData, setRankFormData] = useState({ rank: rank });
-  //   const [percentilesFormData, setPercentilesFormData] = useState({
-  //     percentiles: percentiles,
-  //   });
-  //   const [scroeFormData, setScoreFormData] = useState({ score: score });
-
-  //   const handleChangeRank = (e: { target: { name: any; value: any } }) => {
-  //     setRankFormData({
-  //       ...rankFormData,
-  //       [e.target.name]: e.target.value,
-  //     });
-  //   };
-
-  //   const handleChangePercentiles = (e: {
-  //     target: { name: any; value: any };
-  //   }) => {
-  //     setPercentilesFormData({
-  //       ...percentilesFormData,
-  //       [e.target.name]: e.target.value,
-  //     });
-  //   };
-
-  //   const handleChangeScore = (e: { target: { name: any; value: any } }) => {
-  //     setScoreFormData({
-  //       ...scroeFormData,
-  //       [e.target.name]: e.target.value,
-  //     });
-  //   };
   const handleChange = (e: { target: { name: any; value: any } }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
