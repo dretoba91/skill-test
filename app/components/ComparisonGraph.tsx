@@ -6,15 +6,23 @@ import { Chart } from "react-chartjs-2";
 
 import {
   Chart as ChartJS,
-  CategoryScale, LineController, LineElement, PointElement, LinearScale, Title, Tooltip,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
   Legend,
+  TimeScale,
+  LineController,
 } from "chart.js";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
-  LineElement, 
+  LineElement,
+  TimeScale,
   LineController,
   Title,
   Tooltip,
@@ -49,7 +57,7 @@ const ComparisonGraph: React.FC<PercentileChartProps> = ({
         backgroundColor: "rgba(0, 0, 0, 0)",
         pointBackgroundColor: pointColor,
         pointRadius: 4,
-        tension: 0.4, // Smooth curve
+        tension: 0.8,
       },
     ],
   };

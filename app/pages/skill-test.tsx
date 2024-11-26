@@ -5,13 +5,12 @@ import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import Language from "../components/Language";
 import QuickStat from "../components/QuickStat";
-// import ComparisonGraph from "../components/ComparisonGraph";
+import ComparisonGraph from "../components/ComparisonGraph";
 import Syllabus from "../components/Syllabus";
 import Question from "../components/Question";
 import { useState } from "react";
 
-
-// const dataPoints = [0, 25, 50, 75, 100];
+const dataPoints = [0, 25, 50, 75, 100];
 const data = [
   { title: "HTML Tools, Forms, History", percentage: 80, color: "blue" },
   { title: "Tags & References in HTML", percentage: 60, color: "orange" },
@@ -40,7 +39,10 @@ const SkillSet = () => {
     percentile: number;
     score: number;
   }) => {
-    setScores(updatedScores);
+    setScores((prevScores) => ({
+      ...prevScores,
+      ...updatedScores,
+    }));
     console.log("Updated Scores:", updatedScores);
   };
 
@@ -66,12 +68,12 @@ const SkillSet = () => {
                   scores={scores}
                 />
                 <QuickStat scores={scores} />
-                {/* <ComparisonGraph
+                <ComparisonGraph
                   dataPoints={dataPoints}
                   percentile={scores.percentile}
                   lineColor="gray"
                   pointColor="blue"
-                /> */}
+                />
               </div>
             </div>
             <div className="w-full md:w-2/5 p-4">
